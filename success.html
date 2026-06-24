@@ -1,0 +1,19 @@
+<script>
+document.querySelector("form").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let password =
+        document.querySelector('input[name="password"]').value;
+
+    let confirmPassword =
+        document.querySelector('input[name="confirm_password"]').value;
+
+    if(password !== confirmPassword){
+        alert("Passwords do not match!");
+        return;
+    }
+
+    window.location.href = "success.html";
+});
+</script>
